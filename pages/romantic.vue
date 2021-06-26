@@ -1,15 +1,16 @@
 <template>
   <div>
+    <Preloader />
     <h1
       class=" py-10 px-5 top-0 text-pink-200 text-3xl font-medium tracking-wider"
     >
       Romantic places in Leipzig
     </h1>
     <div class="flex flex-wrap">
-      <div class="w-4/12 ">
-        <div class="list" id="list"></div>
+      <div class="md:w-4/12 sm:w-6/12">
+        <div class="list h-4/5 overflow-auto" id="list"></div>
       </div>
-      <div id="map" class="w-8/12"></div>
+      <div id="map" class="md:w-8/12 sm:w-6/12"></div>
 
       <div class="fixed bottom-0 left-0 right-0 h-6 px-5">
         Icons made by
@@ -25,10 +26,14 @@
 <script>
 import Vue from "vue";
 import mapboxgl from "mapbox-gl";
+import Preloader from "~/components/Preloader.vue";
 import icon from "~/assets/photos/love-2.png";
 
 export default Vue.extend({
   name: "romantic",
+  components: {
+    Preloader
+  },
   data() {
     return {
       map: null,
@@ -481,10 +486,6 @@ export default Vue.extend({
   height: 80vh;
 }
 
-#list {
-  height: 80vh;
-  overflow: auto;
-}
 .item {
   padding: 0.4rem 1.1rem;
   display: flex;

@@ -1,9 +1,9 @@
 <template>
   <div class="px-6">
     <div>
-      <h1 class="py-6">
+      <h2 class="py-6 text-lg">
         Here you can convert your measurements from cups to grams
-      </h1>
+      </h2>
 
       <h3></h3>
       <form class="">
@@ -13,13 +13,13 @@
           name="cups"
           min="1"
           placeholder="1"
-          class="p-1 text-xl text-gray-800 font-medium focus:outline-none appearance-none"
+          class="p-1 text-lg text-gray-800 font-medium focus:outline-none appearance-none"
         />
         <label for="cups">Cup(s) of</label>
 
         <select
           v-model="selectedIngredient"
-          class="p-1 text-xl  focus:outline-none appearance-none "
+          class="p-1 text-lg text-gray-800 focus:outline-none appearance-none "
         >
           <option disabled value="">Select one</option>
           <option value="Milk">Milk</option>

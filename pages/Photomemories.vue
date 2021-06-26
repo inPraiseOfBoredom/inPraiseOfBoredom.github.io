@@ -233,7 +233,7 @@ ul {
   color: white;
   text-shadow: 1px 1px 3px black;
   z-index: 1;
-  font-size: 3em;
+  font-size: 2rem;
   font-weight: 400;
 }
 .slideImage {
